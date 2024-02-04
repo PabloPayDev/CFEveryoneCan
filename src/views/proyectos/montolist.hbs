@@ -1,0 +1,51 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each montos}}
+            <div class="col-md-3" style="height: 100%;">
+                <div class="card text-center mx-auto" style="height: 100%;">
+                    <div class="card-body mx-auto">
+                        <form class="mx-auto" action="/proyectos/view" method="POST">
+                            <div class="input-group mb-3 mx-auto" style="display: none;">
+                                <input id="listProId" name="proyecto_id" class="m-2" value={{proyecto_id}}>
+                                    {{proyecto_id}}
+                                </input>
+                            </div>
+                            <div class="input-group mb-3 mx-auto">
+                                <p class="m-2" rows="3" name="descripcion" style="text-overflow: ellipsis;">
+                                    Nombre/Descripcion: {{descripcion}}
+                                </p>
+                            </div>
+                            <div class="input-group mb-3 mx-auto">
+                                <p class="m-2">
+                                    Precio: {{img_url}} :Bs
+                                </p>
+                            </div>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">                    
+                    <form action="/proyectos/view/montos/add" method="POST">
+                        <div class="input-group mb-3 mx-auto" style="display: none;">
+                            <input id="listProId1" name="proyecto_id" class="m-2" value={{proyecto_id}}>
+                                {{proyecto_id}}
+                            </input>
+                        </div>
+                        <div class="m-3 mx-auto">
+                            <p>
+                                No tienes montos creados.
+                            </p>
+                        </div>                        
+                        <div class="m-3 mx-auto" style="display: none;">
+                            <button class="btn btn-outline-warning btn-block">
+                                Crear Monto
+                            </button>                            
+                        </div>
+                    </form>                    
+                </div>                
+            </div>    
+        {{/each}}
+    </div>
+</div>

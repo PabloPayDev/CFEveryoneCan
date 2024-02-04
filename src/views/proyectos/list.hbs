@@ -1,0 +1,51 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each proyectos}}
+            <div class="col-md-3" style="height: 100%;">
+                <div class="card text-center mx-auto" style="height: 100%;">
+                    <div class="card-body mx-auto">
+                        <form class="mx-auto" action="/proyectos/view" method="POST">
+                            <div class="input-group mb-3 mx-auto">
+                                <h3 class="card-tittle m-2" name="nombre">
+                                    {{nombre}}
+                                </h3>
+                            </div>
+                            <div class="input-group mb-3 mx-auto" style="display: none;">
+                                <input id="listProId" name="proyecto_id" class="m-2" value={{proyecto_id}}>
+                                    {{proyecto_id}}
+                                </input>
+                            </div>
+                            <div class="input-group mb-3 mx-auto">
+                                <p class="m-2" rows="3" name="descripcion" style="text-overflow: ellipsis;">
+                                    {{descripcion}}
+                                </p>
+                            </div>
+                            <div class="input-group mb-3 mx-auto">
+                                <p class="m-2">
+                                    {{timeago fecha_ini}}
+                                </p>
+                            </div> 
+                                                        
+                            <div class="mb-3 mx-auto">
+                                <button class="btn btn-outline-warning btn-block">
+                                    Ver Proyecto
+                                </button>                            
+                            </div>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>
+                        No tienes proyestos creados.
+                    </p>
+                    <a href="/proyectos/add" class='btn btn-outline-warning m-3'>
+                        Crear Proyecto
+                    </a>                    
+                </div>                
+            </div>    
+        {{/each}}
+    </div>
+</div>

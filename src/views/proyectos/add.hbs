@@ -1,0 +1,37 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center mx-auto">
+                <div class="card-body text-center mx-auto">
+                    <form action="/proyectos/add" method="POST" style="text-align:center">                        
+                        <h5 class="m-4">
+                            Ingresa las caracteristicas de tu proyecto.
+                        </h5>
+                        <div class="input-group mb-3" style="text-align:center" >
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre Proyecto" autofocus>    
+                        </div>
+                        <div class="input-group mb-3" style="text-align:center">
+                            <input type="text" name="img_url" class="form-control" placeholder="Datos">
+                        </div>
+                        <div class="input-group mb-3" style="text-align:center">
+                            <input class="form-control" name="descripcion" rows="3" placeholder="Descripcion">
+                        </div>
+                        <div class="input-group mb-3" style="text-align:center">
+                            <select class="form-select" name="categoria" placeholder="Categorias">
+                                <option value="1">Producto</option>
+                                <option value="2">Servicio</option>
+                                <option value="3">Beneficencia</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3" style="text-align:center">
+                            <button class="btn btn-outline-warning btn-block">
+                                Publicar
+                            </button>                            
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>    
+</div>

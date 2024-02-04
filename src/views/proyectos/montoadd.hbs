@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center mx-auto">
+                <div class="card-body text-center mx-auto">
+                    <form action="/proyectos/view/montos/addAct" method="POST" style="text-align:center">                        
+                        <h5 class="m-4">
+                            Ingresa las caracteristicas del monto de tu proyecto.
+                        </h5>
+                        <div class="input-group mb-3 mx-auto" style="display: none;">
+                            <input id="listProId" name="proyecto_id" class="m-2" value={{proyecto_id}}>
+                                {{proyecto_id}}
+                            </input>
+                        </div>
+                        <div class="input-group mb-3" style="text-align:center" >
+                            <input type="text" class="form-control" name="descripcion" placeholder="Descripcion" autofocus>    
+                        </div>
+                        <div class="input-group mb-3" style="text-align:center">
+                            <input type="text" name="img_url" class="form-control" placeholder="Cantidad">
+                        </div>
+
+                        <div class="mb-3" style="text-align:center">
+                            <button class="btn btn-outline-warning btn-block">
+                                Publicar
+                            </button>                            
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>    
+</div>
